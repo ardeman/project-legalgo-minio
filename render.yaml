@@ -10,7 +10,7 @@ services:
   # web service
   # dockerCommand: minio server /data --address $HOST:$PORT
   autoDeploy: false
-  region: singapore
+  region: singapore # https://render.com/docs/blueprint-spec#region
   disk:
     name: data
     mountPath: /data
@@ -37,7 +37,8 @@ services:
   dockerContext: /
   dockerfilePath: ./Dockerfile
   autoDeploy: false
-  region: singapore
+  region: singapore # https://render.com/docs/blueprint-spec#region
+  plan: free # https://render.com/docs/blueprint-spec#plan
   envVars:
   - key: PORT
     value: 10000
